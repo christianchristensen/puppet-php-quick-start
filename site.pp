@@ -35,7 +35,7 @@ class mysites {
 
 node default {
   class { 'mysites': }
-  mysites::install { '_': vhost => '_', path => '/srv/ec2-2' }
-  mysites::install { 'ec2-174-129-134-0.compute-1.amazonaws.com': vhost => 'ec2-174-129-134-0.compute-1.amazonaws.com', path => '/srv/ec2-1' }
+  mysites::install { '_': vhost => '_', path => '/srv/www' }
+  mysites::install { '1': vhost => 'localhost', path => '/srv/localhost' }
 }
 
