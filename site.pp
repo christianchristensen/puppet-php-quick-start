@@ -13,12 +13,12 @@ class mysites {
     nginx::resource::vhost { $vhost:
       location => '~ \.php$',
       locations => {
-        "$vhost-0" => {
+        "${vhost}-0" => {
           'ensure' => present,
           'location' => '/',
           'try_files' => ['$uri', '$uri/', '@rewriteapp'],
         },
-        "$vhost-1" => {
+        "${vhost}-1" => {
           'ensure' => present,
           'location' => '@rewriteapp',
           'options' => {'rewrite' => '^ /index.php last'},
