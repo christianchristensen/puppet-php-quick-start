@@ -5,6 +5,6 @@ These puppet confs (and example bootstrap) can get a clean server running nginx+
 ### Ok, go!
 
 ```sh
-ssh <user>@<remote> "curl bootstrap.sh | sh"
+ssh <user>@<remote> "curl https://raw.github.com/christianchristensen/puppet-php-quick-start/master/bootstap.sh | sh"
 ```
 

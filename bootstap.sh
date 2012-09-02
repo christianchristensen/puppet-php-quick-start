@@ -6,6 +6,6 @@ sudo apt-get install -yq puppet git-core ruby1.8 libopenssl-ruby ruby rubygems r
 sudo gem install librarian-puppet --no-ri --no-rdoc
 sudo mkdir /opt/build -m0755
 sudo chown ubuntu:ubuntu /opt/build
-# dl stuff and build
+git clone https://github.com/christianchristensen/puppet-php-quick-start.git /opt/build
 cd /opt/build && librarian-puppet install --verbose
 sudo puppet apply --verbose /opt/build/site.pp --modulepath=/opt/build/modules
