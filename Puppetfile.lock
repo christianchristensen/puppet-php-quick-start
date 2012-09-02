@@ -1,0 +1,24 @@
+FORGE
+  remote: http://forge.puppetlabs.com
+  specs:
+    puppetlabs/stdlib (3.0.1)
+
+GIT
+  remote: git://github.com/AllPlayers/puppet-acl.git
+  ref: master
+  sha: 1b30cd5b9c34ef18437fbaa8e688ef73854b8f46
+  specs:
+    acl (0.0.1)
+
+GIT
+  remote: git://github.com/AllPlayers/puppet-nginx.git
+  ref: master
+  sha: ec0482a54953c2b08eba34e231c3feb916bc1b48
+  specs:
+    nginx (0.0.1)
+
+DEPENDENCIES
+  acl (>= 0)
+  nginx (>= 0)
+  puppetlabs/stdlib (>= 0)
+
