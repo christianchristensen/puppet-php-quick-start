@@ -8,4 +8,4 @@ sudo mkdir /opt/build -m0755
 sudo chown ubuntu:ubuntu /opt/build
 git clone https://github.com/christianchristensen/puppet-php-quick-start.git /opt/build
 cd /opt/build && librarian-puppet install --verbose
-sudo puppet apply --verbose /opt/build/site.pp --modulepath=/opt/build/modules
+sudo puppet apply --verbose /opt/build/manifests/site.pp --modulepath=/opt/build/modules
