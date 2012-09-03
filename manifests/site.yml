@@ -1,0 +1,7 @@
+classes:
+  mysites:
+    sites:
+      _:
+        path: "/srv/www"
+      localhost:
+        path: "/srv/local"

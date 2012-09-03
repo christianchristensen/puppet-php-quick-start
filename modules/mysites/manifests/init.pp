@@ -1,4 +1,6 @@
-class mysites {
+class mysites (
+  $sites = params_lookup('sites')
+) {
   package { 'php5-fpm':
     ensure => present,
   }
@@ -9,7 +11,8 @@ class mysites {
 
   class { 'nginx': }
 
-  define install ($vhost = 'localhost', $path = '/srv/www') {
+  define install ($path = '/srv/www') {
+    $vhost = $name
     nginx::resource::vhost { $vhost:
       location => '~ \.php$',
       locations => {
@@ -31,11 +34,7 @@ class mysites {
       fastcgi_script => '$document_root$fastcgi_script_name',
     }
   }
-}
 
-node default {
-  class { 'mysites': }
-  mysites::install { '_': vhost => '_', path => '/srv/www' }
-  mysites::install { '1': vhost => 'localhost', path => '/srv/localhost' }
+  create_resources('mysites::install', $sites)
 }
 
