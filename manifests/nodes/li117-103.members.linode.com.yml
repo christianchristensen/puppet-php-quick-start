@@ -1,0 +1,11 @@
+classes:
+  mysites:
+    sites:
+      _:
+        path: "/srv/www"
+      "christianandsara.com www.christianandsara.com":
+        path: "/srv/christianandsara"
+      "lylealumniboard.com www.lylealumniboard.com":
+        path: "/srv/lylealumniboard"
+      "imapnote.com www.imapnote.com":
+        path: "/srv/imapnote"
